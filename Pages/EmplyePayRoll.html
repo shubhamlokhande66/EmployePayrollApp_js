@@ -6,10 +6,8 @@
     <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="../CSS/EmployePayRoll.css">
     <link rel="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600&display=swap" rel="stylesheet">
+
 </head>
-
-
-
 
 <body>
     <header class="header-content header">
@@ -26,7 +24,8 @@
             <div class="form-head">Employee Payroll Form</div>
             <div class="row-content">
                 <label class="label text" for="name">Name</label>
-                <input class="input" type="text" name="name" id="name" placeholder="Enter Name here" required>
+                <input class="input" type="text" name="name" id="name" placeholder="Enter name here" required>
+                <error-output class="text-error" for="text"></error-output>
             </div>
             <div class="row-content">
                 <label class="label text" for="profile">Profile Image</label>
@@ -37,7 +36,7 @@
                     </label>
                     <label>
                         <input type="radio" name="profile" id="profile2" value="../assets/profile-images/Ellipse -1.png" required>
-                        <img class=" profile" id="image2" src="../Assets/Ellipse -1.png">
+                        <img class=" profile" id="image2" src="..//Assets/Ellipse -1.png">
                     </label>
                     <label>
                         <input type="radio" name="profile" id="profile3" value="../assets/profile-images/Ellipse -8.png" required>
@@ -76,7 +75,7 @@
             <div class="row-content">
                 <label class="label text" for="salary">Salary</label>
                 <input class="input" type="range" name="salary" id="salary" max="500000" min="300000" step="100" value=400000>
-                <output class="Salary-output text" for="salary">400000</output>
+                <output class="Salary-output text" id="salary-output" for="salary">400000</output>
             </div>
             <div class="row-content">
                 <label class="label text" for="startdate">Start Date</label>
@@ -142,15 +141,15 @@
                 <textarea class="input" id="notes" name="notes" placeholder="type your notes here" style="height: 100px;"></textarea>
             </div>
             <div class="buttonParent">
-                <a href="./Home.html" class="resetButton button cancelButton">Cancel</a>
+                <a href="./home.html" class="resetButton button cancelButton">Cancel</a>
                 <div class="submit-reset">
                     <button class="submitButton button" type="submit" id="submit">Submit</button>
                     <button class="resetButton button" type="reset" id="reset">Reset</button>
                 </div>
-        </div>
-    </header>
+            </div>
+        </form>
+    </div>
+    <script src="../JavaScript/EmployePayRoll.js"></script>
 </body>
 
-</html>
-
-
+</html
