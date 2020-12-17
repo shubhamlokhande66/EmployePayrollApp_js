@@ -5,7 +5,7 @@ const salary = document.getElementById("salary");
             output.innerHTML = this.value;
         }
 
-        const text = document.querySelector('.input');
+        const text = document.querySelector('#name');
 const textError = document.querySelector('.text-error');
 text.addEventListener('input', function () {
     let nameRegex = RegExp(/^([\w]{3,})+\s+([\w\s]{3,})+$/);
