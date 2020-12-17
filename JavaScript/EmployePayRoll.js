@@ -21,7 +21,16 @@ const save = () => {
         return;
     }
 }
-
+function createAndUpdateStorage(employeePayrollData) {
+    let employeePayrollList = JSON.parse(localStorage.getItem("EmployeePayrollList"));
+    if(employeePayrollList != undefined){
+        employeePayrollList.push(employeePayrollData);
+    } else{
+        employeePayrollList = [employeePayrollData]
+    }
+    alert(employeePayrollList.toString());
+    localStorage.setItem("EmployeePayrollList", JSON.stringyfy(employeePayrollList))
+}
 const createEmployeePayroll = () => {
     let employeePayrollData = new EmployeePayrollData();
     try {
@@ -54,6 +63,7 @@ const getInputValueById = (id) => {
     let value = document.querySelector(id).value;
     return value;
 }
+
 
 const salary = document.getElementById("salary");
         const output = document.getElementById("salary-output");
