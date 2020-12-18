@@ -41,7 +41,7 @@ const createEmployeePayroll = () => {
     }
     employeePayrollData.profilePic = getSelectedValues('[name=profile]').pop();
     employeePayrollData.gender = getSelectedValues('[name=gender]').pop();
-    employeePayrollData.department = getSelectedValues('[name=department]');
+    employeePayrollData.department = getSelectedValues('[name=department]').pop();
     employeePayrollData.salary = getInputValueById('#salary');
     employeePayrollData.note = getInputValueById('#notes');
     let date = getInputValueById('#day')+" "+getInputValueById('#month')+" "+getInputValueById('#year');
@@ -63,6 +63,7 @@ const getInputValueById = (id) => {
     let value = document.querySelector(id).value;
     return value;
 }
+
 
 const resetForm = () => {
     setValue('#name','');
