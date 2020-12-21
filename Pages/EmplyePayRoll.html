@@ -1,158 +1,161 @@
+
+
 <!DOCTYPE html>
-
+<html lang="en">
 <head>
-    <title>Employee Payroll Form</title>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../CSS/EmployePayRoll.css">
-   <link rel="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600&display=swap" rel="stylesheet">
-
+    <script defer src="../JavaScript/EmployePayRoll.js"></script>
+    <script defer src="../JavaScript/EmployePayrollData.js"></script>
+    <title>Employee Payroll Portal</title>
 </head>
-
 <body>
     <header class="header-content header">
         <div class="logo-content">
-            <img src="../Assets/logo.png" alt="Logo">
+            <img src="../Assets/logo.png" width=60px alt="logo">
             <div>
-                <span class="emp-text">EMPLOYEE</span><br>
+                <span class="emp-text ">EMPLOYEE</span>
                 <span class="emp-text emp-payroll">PAYROLL</span>
             </div>
         </div>
     </header>
     <div class="form-content">
-        <form class="form" action="#" onsubmit="save();return false">
-            <div class="form-head">Employee Payroll Form</div>
+        <form action="#" class="form" onsubmit="save()">
+            <div class="form-head">Employee Payroll form</div>
             <div class="row-content">
-                <label class="label text" for="name">Name</label>
-                <input class="input" type="text" name="name" id="name" placeholder="Enter name here" required>
-                <error-output class="text-error" for="text"></error-output>
-            </div>
+                <label for="name" class="label text">Name</label>
+                <input type="text" class="input" id="name" name="name" placeholder="Enter Name" required>
+                <error-output class="text-error" for="text" ></error-output>
+            </div>  
             <div class="row-content">
-                <label class="label text" for="profile">Profile Image</label>
+                <label for="profile" class="lable text">Profile image</label>
                 <div class="profile-radio-content">
                     <label>
-                        <input type="radio" name="profile" id="profile1" value="../assets/profile-images/Ellipse -3.png" required>
-                        <img class=" profile" id="image1" src="../Assets/Ellipse -3.png">
+                        <input type="radio" id="profile1" name="profile" 
+                            value="../Assets/Ellipse -3.png" required>
+                        <img class="profile" id="image1" src="../Assets/Ellipse -3.png" alt="profileImg">
                     </label>
                     <label>
-                        <input type="radio" name="profile" id="profile2" value="../assets/profile-images/Ellipse -1.png" required>
-                        <img class=" profile" id="image2" src="../Assets/Ellipse -1.png">
+                        <input type="radio" id="profile2" name="profile" 
+                            value="../Assets/Ellipse -1.png" required>
+                        <img class="profile" id="image2" src="../Assets/Ellipse -1.png"  alt="profileImg">
                     </label>
                     <label>
-                        <input type="radio" name="profile" id="profile3" value="../assets/profile-images/Ellipse -8.png" required>
-                        <img class=" profile" id="image3" src="../Assets/Ellipse -8.png">
+                        <input type="radio" id="profile3" name="profile" 
+                            value="../Assets/Ellipse -8.png" required>
+                        <img class="profile" id="image3" src="../Assets/Ellipse -8.png"  alt="profileImg">
                     </label>
                     <label>
-                        <input type="radio" name="profile" id="profile4" value="../assets/profile-images/Ellipse -7.png" required>
-                        <img class=" profile" id="image4" src="../Assets/Ellipse -7.png">
+                        <input type="radio" id="profile4" name="profile" 
+                            value="../Assets/Ellipse -7.png" required>
+                        <img class="profile" id="image4" src="../Assets/Ellipse -7.png"  alt="profileImg">
                     </label>
                 </div>
             </div>
             <div class="row-content">
-                <label class="label text" for="gender">Gender</label>
-                <div>
-                    <input type="radio" name="gender" id="male" value="male">
-                    <label class="text" for="female">Male</label>
-                    <input type="radio" name="gender" id="female" value="female">
+                <label class="labl text" for="gender">Gender</label>
+                <div style="display: flex;" class="gender-content">
+                    <input type="radio" id="male" name="gender" value="Male">
+                    <label class="text" for="male">Male</label>
+                    <input type="radio" id="female" name="gender" value="Female">
                     <label class="text" for="female">Female</label>
                 </div>
             </div>
             <div class="row-content">
                 <label class="label text" for="department">Department</label>
-                <div>
-                    <input class="checkbox" type="checkbox" name="hr" id="hr" value="hr">
-                    <label class=" text" for="hr">Hr</label>
-                    <input class="checkbox" type="checkbox" name="sales" id="sales" value="sales">
-                    <label class=" text" for="sales">Sales</label>
-                    <input class="checkbox" type="checkbox" name="finance" id="finance" value="finance">
-                    <label class=" text" for="finance">Finance</label>
-                    <input class="checkbox" type="checkbox" name="engineer" id="engineer" value="engineer">
-                    <label class=" text" for="engineer">Engineer</label>
-                    <input class="checkbox" type="checkbox" name="others" id="others" value="others">
-                    <label class=" text" for="other">Others</label>
+                <div style="display: flex;" class="checkbox-content">
+                    <input type="checkbox" class="checkbox" id="hr" name="department" value="HR">
+                    <label class="text" for="hr">HR</label>
+                    <input type="checkbox" class="checkbox" id="sales" name="department" value="sales">
+                    <label class="text" for="sales">Sales</label>
+                    <input type="checkbox" class="checkbox" id="engineer" name="department" value="Engineer">
+                    <label class="text" for="engineer">Engineer</label>
+                    <input type="checkbox" class="checkbox" id="others" name="department" value="Others">
+                    <label class="text" for="hr">Others</label>
                 </div>
             </div>
             <div class="row-content">
-                <label class="label text" for="salary">Salary</label>
-                <input class="input" type="range" name="salary" id="salary" max="500000" min="300000" step="100" value=400000>
-                <output class="Salary-output text" id="salary-output" for="salary">400000</output>
+                <label class="label text" for="salary">Select salary </label>
+                <input type="range" class="input" id="salary" name="salary" min="300000" max="800000" step="1000" value="400000">
+                <output class="salary-output" for="salary">400000</output>
             </div>
             <div class="row-content">
-                <label class="label text" for="startdate">Start Date</label>
-                <div>
+                <label class="label text" for="startDate">Start Date</label>
+                <div class="select-content">
                     <select id="day" name="Day">
-                       <option value="1">1</option>
-                       <option value="2">2</option>
-                       <option value="3">3</option>
-                       <option value="4">4</option>
-                       <option value="5">5</option>
-                       <option value="6">6</option>
-                       <option value="7">7</option>
-                       <option value="8">8</option>
-                       <option value="9">9</option>
-                       <option value="10">10</option>
-                       <option value="11">11</option>
-                       <option value="12">12</option>
-                       <option value="13">13</option>
-                       <option value="14">14</option>
-                       <option value="15">15</option>
-                       <option value="16">16</option>
-                       <option value="17">17</option>
-                       <option value="18">18</option>
-                       <option value="19">19</option>
-                       <option value="20">20</option>
-                       <option value="21">21</option>
-                       <option value="22">22</option>
-                       <option value="23">23</option>
-                       <option value="24">24</option>
-                       <option value="25">25</option>
-                       <option value="26">26</option>
-                       <option value="27">27</option>
-                       <option value="28">28</option>
-                       <option value="29">29</option>
-                       <option value="30">30</option>
-                       <option value="31">31</option>
-                   </select>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                        <option value="13">13</option>
+                        <option value="14">14</option>
+                        <option value="15">15</option>
+                        <option value="16">16</option>
+                        <option value="17">17</option>
+                        <option value="18">18</option>
+                        <option value="19">19</option>
+                        <option value="20">20</option>
+                        <option value="21">21</option>
+                        <option value="22">22</option>
+                        <option value="23">23</option>
+                        <option value="24">24</option>
+                        <option value="25">25</option>
+                        <option value="26">26</option>
+                        <option value="27">27</option>
+                        <option value="28">28</option>
+                        <option value="29">29</option>
+                        <option value="30">30</option>
+                        <option value="31">31</option>
+                    </select>
                     <select id="month" name="Month">
-                    <option value="jan">January</option>
-                    <option value="feb">Febuary</option>
-                    <option value="mar">March</option>
-                    <option value="apr">April</option>
-                    <option value="may">May</option>
-                    <option value="june">June</option>
-                    <option value="july">July</option>
-                    <option value="aug">August</option>
-                    <option value="sep">September</option>
-                    <option value="oct">October</option>
-                    <option value="nov">November</option>
-                    <option value="dec">December</option>
-                </select>
+                        <option value="Jan">January</option>
+                        <option value="Feb">Febuary</option>
+                        <option value="March">March</option>
+                        <option value="April">April</option>
+                        <option value="May">May</option>
+                        <option value="June">June</option>
+                        <option value="July">July</option>
+                        <option value="Aug">August</option>
+                        <option value="Sept">September</option>
+                        <option value="Oct">October</option>
+                        <option value="Nov">Novmber</option>
+                        <option value="Dec">December</option>
+                    </select>
                     <select id="year" name="Year">
-                    <option value="2020">2020</option>
-                    <option value="2019">2019</option>
-                    <option value="2018">2018</option>
-                    <option value="2017">2017</option>
-                    <option value="2016">2016</option>
-                </select>
+                        <option value="2020">2020</option>
+                        <option value="2019">2019</option>
+                        <option value="2018">2018</option>
+                        <option value="2017">2017</option>
+                        <option value="2016">2016</option>
+                    </select>
+                    <error-output class="date-error" for="text" ></error-output>
                 </div>
+                <error-output class="date-error" for="text"></error-output>
             </div>
             <div class="row-content">
                 <label class="label text" for="notes">Notes</label>
-                <textarea class="input" id="notes" name="notes" placeholder="type your notes here" style="height: 100px;"
-                ></textarea>
+                <textarea id="notes" class="input" name="Notes"  style="height: 100px;"></textarea>
             </div>
             <div class="buttonParent">
                 <a href="./Home.html" class="resetButton button cancelButton">Cancel</a>
                 <div class="submit-reset">
-                    <button class="submitButton button" type="submit" id="submit">Submit</button>
-                    <button class="resetButton button" type="reset" id="reset">Reset</button>
+                    <button type="submit" class="button submitButton" id="submitButton">Submit</button>
+                    <button type="reset" class="button resetButton">Reset</button>
                 </div>
             </div>
         </form>
     </div>
-    <script  src="../JavaScript/EmployePayRoll.js"></script>
-    <script  src="../JavaScript/EmployePayrollData.js"></script>
-    <script  src="../JavaScript/Home.js"></script>
+    <div id="data"></div>
 </body>
-
-</html
+</html>
