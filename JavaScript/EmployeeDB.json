@@ -1,0 +1,54 @@
+{
+  "EmployeePayrollDB": [
+    {
+      "_name": "Shubham Lokhande",
+      "_profilePic": "../assets/profile-images/Ellipse -3.png",
+      "_gender": "Male",
+      "_department": [
+        "Sales",
+        "Engineer"
+      ],
+      "_salary": "391200",
+      "_notes": "1",
+      "_startDate": "7 Dec 2020",
+      "id": 5
+    },
+    {
+      "_name": "Shubham D lokhandes",
+      "_gender": "Male",
+      "_department": [
+        "Sales"
+      ],
+      "_salary": "400000",
+      "_startDate": "29 Oct 2019",
+      "_note": "",
+      "_profilePic": "../assets/profile-images/Ellipse -8.png",
+      "id": 6,
+      "_notes": "undefined"
+    },
+    {
+      "_name": "Shubham Lokhande",
+      "_profilePic": "../Assets/profile-images/Ellipse -3.png",
+      "_gender": "male",
+      "_department": [
+        "HR"
+      ],
+      "_salary": "421100",
+      "_notes": "q",
+      "_startDate": "1 Dec 2020",
+      "id": 7
+    },
+    {
+      "_name": "Shubham Dilip Lokhande",
+      "_profilePic": "../assets/profile-images/Ellipse -3.png",
+      "_gender": "Male",
+      "_department": [
+        "HR"
+      ],
+      "_salary": "451100",
+      "_notes": "DB.json",
+      "_startDate": "1 Dec 2020",
+      "id": 8
+    }
+  ]
+}
